@@ -6,7 +6,7 @@ Please see the overleaf document for this project at: https://www.overleaf.com/6
 
 I have not yet started to write for this project. However, the references might be interest of whoever continues with this project.
 
-# brief discription
+# brief description
 
 Nowadays, more and more devices benefit from the development of wireless communication infanstructures and communicate with each other using various protocols, including Wi-Fi. 
 However, with the increasing need of communication comes with the increasing need for security. As more and more sensitive information are shared through wireless communications, adverserial attackers often fake their identities and request those sensitive information from service providers.
@@ -29,7 +29,11 @@ In summary, these three needs call for a robust, efficient ML model that can cor
 3. There are some future directions that I think could be promising.
 First, no matter what happens to the other scenarios, if you train the model on only one receiver, the generalization ability of all models are very poor. This is very strange, and it indicates great potential of improvement. HD computing is ususally suitable for this kind of task because you have the freedom of designing the encoding function, which allows you to manually extract features that will be used for classification. I suggest to consider the time-series nature of the data and design encoding functions around that. Also, ID-level could be useful.
 Second, if you can come up with a neat encoding that parallelizes well, HD should be faster than CNN. Besides, HD is hardware friendly, which brings another advantage compared to DNN networks if you put it on a specialized FPGA design.
-Third, if HD really does not work on this task, as a final step, you could think about how to do feature engineering such that CNN also generalizes to the extend of LSTM (without sacrificing the effciency)
+Third, if HD really does not provide any robustness advantages, as a final step, you could think about how to do feature engineering such that CNN also generalizes to the extend of LSTM (without sacrificing the effciency)
+Fourth, if nothing works, you could try to do a detailed analysis on the SoTA models and their performance on this dataset. This means looking at how each design principle affects the performance and generating more signal samples if needed. I personally think this is only the last option if there is absolutely nothing can be done, but I saw papers on good conference published in this manner. I suggest asking Tajana before taking this option.
+
+4. This dataset is relatively new, and at least when I was implementing the baselines, I was not aware of any work that directly implements on this dataset except for the model provided by the dataset paper. This means that you have some degree of freedom on deciding the baselines. However, if you want to publish a paper on this topic, I still recommend doing another round of survey, and try to re-implement more models (even theoretically their results won't be very different from the classical models).
+I included some model choices in the reference of the overleaf document. Those references do not apply directly to this dataset, but adding their design choices on top of existing implementations could strengthen the experiment section.
 
 # contact
 I will not be always available during the summer, but you may still contact me if you need to discuss the project and ideas. You can contact me at d1liu@ucsd.edu. Please also cc daninboston2000@gmail.com and 1171910390@qq.com in case UCSD and gmail does not work in my country.
